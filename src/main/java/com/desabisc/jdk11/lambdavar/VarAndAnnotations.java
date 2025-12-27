@@ -16,7 +16,8 @@ public class VarAndAnnotations {
 
   /**
    * You may want to add annotations to lambda parameters, such as marking a parameter as @NonNull
-   * for validation purposes. This is useful in frameworks that require strict validation of inputs.
+   * for validation purposes. This is useful in frameworks that require strict validation of
+   * inputs.
    */
   static void annotationEg() {
     log.info("********** annotation eg **********");
@@ -32,6 +33,7 @@ public class VarAndAnnotations {
 
   // Custom @NonNull annotation for illustration
   @interface NonNull {
+
   }
 
   /**
@@ -53,9 +55,8 @@ public class VarAndAnnotations {
   }
 
   /**
-   * Use Case:
-   * You might be working with a collection of data and want to process it using Stream and var for
-   * parameter type inference.
+   * Use Case: You might be working with a collection of data and want to process it using Stream
+   * and var for parameter type inference.
    */
   static void streamVarEg() {
     log.info("********** stream eg **********");
@@ -68,9 +69,8 @@ public class VarAndAnnotations {
   }
 
   /**
-   * Use Case:
-   * Suppose you are processing data in parallel using the parallelStream() method and want to keep
-   * the lambda expression clean and concise using var.
+   * Use Case: Suppose you are processing data in parallel using the parallelStream() method and
+   * want to keep the lambda expression clean and concise using var.
    */
   static void parallelProcessingEg() {
     log.info("********** parallel processing eg **********");

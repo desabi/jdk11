@@ -4,11 +4,8 @@ import lombok.extern.slf4j.Slf4j;
 
 /**
  * The new String methods introduced in Java 11, these methods are:
- *
- * isBlank()
- * lines()
- * strip(), stripLeading(), stripTrailing()
- * repeat(int n)
+ * <p>
+ * isBlank() lines() strip(), stripLeading(), stripTrailing() repeat(int n)
  */
 @Slf4j
 public class NewStringMethods {
@@ -20,9 +17,8 @@ public class NewStringMethods {
   }
 
   /**
-   * Use Case:
-   * In web applications, you often need to validate user input. If a user submits a form with only
-   * whitespace characters, you'd want to consider the input as "blank."
+   * Use Case: In web applications, you often need to validate user input. If a user submits a form
+   * with only whitespace characters, you'd want to consider the input as "blank."
    */
   static void isBlankEg() {
     log.info("*************** isBlank() method **********");
@@ -43,21 +39,21 @@ public class NewStringMethods {
   }
 
   /**
-   * You might need to process a multi-line string, such as reading the content of a log file
-   * or user input from a text area. The lines() method helps convert a multi-line String into
-   * a Stream of individual lines for easier processing.
+   * You might need to process a multi-line string, such as reading the content of a log file or
+   * user input from a text area. The lines() method helps convert a multi-line String into a Stream
+   * of individual lines for easier processing.
    */
   static void linesEg() {
     log.info("*************** lines() method **********");
     String multiLineText = "Java 11\nintroduced new\nstring methods.";
     log.info("Processing lines:");
-    multiLineText.lines().forEach(line ->log.info("> {}", line));
+    multiLineText.lines().forEach(line -> log.info("> {}", line));
   }
 
   /**
-   * When dealing with data from external sources (such as APIs or files), extra whitespace might be present.
-   * strip() (and its variants) help clean up this whitespace.
-   * Unlike trim(), which only removes ASCII space (0x20), strip() handles Unicode whitespace characters as well.
+   * When dealing with data from external sources (such as APIs or files), extra whitespace might be
+   * present. strip() (and its variants) help clean up this whitespace. Unlike trim(), which only
+   * removes ASCII space (0x20), strip() handles Unicode whitespace characters as well.
    */
   static void stripEg() {
     log.info("*************** strip() method **********");

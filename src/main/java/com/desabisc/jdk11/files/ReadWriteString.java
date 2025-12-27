@@ -1,10 +1,8 @@
 package com.desabisc.jdk11.files;
 
-import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 
 /**

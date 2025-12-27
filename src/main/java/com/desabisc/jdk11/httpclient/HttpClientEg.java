@@ -11,6 +11,7 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class HttpClientEg {
+
   // using a mock rest api created in soapui
   public static void main(String[] args) {
     example();
@@ -28,7 +29,8 @@ public class HttpClientEg {
           .build();
 
       // Send a request and get response
-      HttpResponse<String> httpResponse = httpClient.send(httpRequest, HttpResponse.BodyHandlers.ofString());
+      HttpResponse<String> httpResponse = httpClient.send(httpRequest,
+          HttpResponse.BodyHandlers.ofString());
 
       if (httpResponse.statusCode() == 200) {
         String responseBody = httpResponse.body();
@@ -37,7 +39,7 @@ public class HttpClientEg {
         log.info("Status Code: {}", httpResponse.statusCode());
       }
     } catch (Exception exception) {
-      log.error("Exception is: {}",exception.getMessage());
+      log.error("Exception is: {}", exception.getMessage());
     }
   }
 }
